@@ -1,4 +1,4 @@
-# Myeloid-Panel-Coverage
+# AmpliSeq-Myeloid-Panel-Coverage
 Workflow for the Illumina TruSight Myeloid target-based coverage analysis using Snakemake.
 
 
