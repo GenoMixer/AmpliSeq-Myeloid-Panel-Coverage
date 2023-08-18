@@ -1,5 +1,5 @@
 # AmpliSeq-Myeloid-Panel-Coverage
-Workflow for the Illumina TruSight Myeloid target-based coverage analysis using Snakemake.
+Workflow for the Illumina AmpliSeq Myeloid target-based coverage analysis using Snakemake.
 
 
 ## Requirement
@@ -12,7 +12,7 @@ Workflow for the Illumina TruSight Myeloid target-based coverage analysis using 
 
 
 ## General Information
-For each Illumina TruSight Myeloid amplicon-based sequencing run, a target-based coverage analysis is performed to identify the mean coverage, regions and bases failed to reach the target region coverage. For this, a coverage threshold of 500x and exon/intron boundaries of +/-20 bp based on the coding sequences of the target regions were defined. This snakemake workflow will look for the samplesheet of the sequencing run and the "Alignment_1" directory with the output data from the Illumina Pisces pipeline and will serve as input for the coverage analysis. The pipeline should be executed from the corresponding flowcell directory and the output data will be stored in a toplevel directory called "coverage". The main results of the coverage analysis are stored in a sample-wise manner in excel-based worksheets. 
+For each Illumina AmpliSeq Myeloid amplicon-based sequencing run, a target-based coverage analysis is performed to identify the mean coverage, regions and bases failed to reach the target region coverage. For this, a coverage threshold of 500x and exon/intron boundaries of +/-20 bp based on the coding sequences of the target regions were defined. This snakemake workflow will look for the samplesheet of the sequencing run and the "Alignment_1" directory with the output data from the Illumina Pisces pipeline and will serve as input for the coverage analysis. The pipeline should be executed from the corresponding flowcell directory and the output data will be stored in a toplevel directory called "coverage". The main results of the coverage analysis are stored in a sample-wise manner in excel-based worksheets. 
 
 
 ## Usage
@@ -38,7 +38,7 @@ cd "/mnt/nas-5268189/ifh-rechenzentrum1/illumina/MiSeqOutput/230413"
 3. Clone the repository into the runfolder:
 
     ```bash
-    git clone "https://github.com/GenoMixer/Myeloid-Panel-Coverage.git"
+    git clone "https://github.com/GenoMixer/AmpliSeq-Myeloid-Panel-Coverage.git"
     ```
 
 4. Activate the snakemake environment with the relevant tools, i.e. mosdepth, bedtools and r-xlsx:
