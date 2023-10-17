@@ -22,7 +22,15 @@ For each Illumina AmpliSeq Myeloid amplicon-based sequencing run, a target-based
 cd "/mnt/nas-5268189/ifh-rechenzentrum1/illumina/MiSeqOutput/230413"
 ```
 
-2. Create a samplesheet with the corresponding samples and targeted genes as depicted here. First column with sample ids should be tab seperated and the corresponding genes comma seperated. The file should be named as following "Run_" + "Date" + "_Genliste.txt" and stored in the toplevel directory of the flowcell folder:
+2. Create a folder to move the Pisces BAM files into an seperate folder:
+
+```bash
+mkdir "pisces_bam"
+mv *.pisces.bam pisces_bam
+```
+
+
+3. Create a samplesheet with the corresponding samples and targeted genes as depicted here. First column with sample ids should be tab seperated and the corresponding genes comma seperated. The file should be named as following "Run_" + "Date" + "_Genliste.txt" and stored in the toplevel directory of the flowcell folder:
 
 ```bash
 57204	ASXL1,TP53,RUNX1,IDH1,IDH2
@@ -35,19 +43,19 @@ cd "/mnt/nas-5268189/ifh-rechenzentrum1/illumina/MiSeqOutput/230413"
 57307	ASXL1,TP53,RUNX1,IDH1,IDH2
 ```
 
-3. Clone the repository into the runfolder:
+4. Clone the repository into the runfolder:
 
     ```bash
     git clone "https://github.com/GenoMixer/AmpliSeq-Myeloid-Panel-Coverage.git"
     ```
 
-4. Activate the snakemake environment with the relevant tools, i.e. mosdepth, bedtools and r-xlsx:
+5. Activate the snakemake environment with the relevant tools, i.e. mosdepth, bedtools and r-xlsx:
 
     ```bash
     conda activate "/mnt/nas-5268189/ifh-rechenzentrum1/bioinformatik/conda/envs/coverage"
     ```
 
-5. Start a dry run (-n) and estimate the numbers of jobs(-j) provided by snakemake:
+6. Start a dry run (-n) and estimate the numbers of jobs(-j) provided by snakemake:
 
     ```bash
     snakemake -j 48 -n
