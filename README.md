@@ -22,7 +22,7 @@ For each Illumina AmpliSeq Myeloid amplicon-based sequencing run, a target-based
 cd "/mnt/nas-5268189/ifh-rechenzentrum1/illumina/MiSeqOutput/230413"
 ```
 
-2. Create a folder to move the Pisces BAM files into an seperate folder:
+2. Create a folder to move the Pisces BAM files into it:
 
 ```bash
 mkdir "pisces_bam"
